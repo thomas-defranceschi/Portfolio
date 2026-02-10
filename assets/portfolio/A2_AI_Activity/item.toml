@@ -1,0 +1,38 @@
+# Copy this folder and rename it to your item slug, e.g. cie-pseudocode-to-python
+# Then fill in the fields below.
+
+title = "AI Activity"
+school = "MIST"
+curriculum = "CIE"
+subject = "Computer Science"
+# use an array for multiple grade levels
+grade = ["A2"]
+# category: project | activity | presentation | cheat-sheet | tool | github-link
+item_type = "activity"
+checked = false
+
+# Resources attached to this item
+[[resources]]
+type = "pdf"
+path = "AI_Homework.pdf"
+label = "instructions"
+
+[[resources]]
+type = "python"
+path = "graph_algorithms.py"
+label = "student file"
+
+[[resources]]
+type = "python"
+path = "graph_collection.py"
+label = "collection of graph instances"
+
+[[resources]]
+type = "python"
+path = "graph.py"
+label = "class definition file"
+
+[[resources]]
+type = "python"
+path = "test_graph_algorithms.py"
+label = "tester file"

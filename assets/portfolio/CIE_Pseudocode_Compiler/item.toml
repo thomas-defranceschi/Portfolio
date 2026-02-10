@@ -1,0 +1,18 @@
+# Copy this folder and rename it to your item
+# Then fill in the fields below.
+
+title = "CIE Pseudocode Translator"
+school = "MIST"
+curriculum = "CIE"
+subject = "Computer Science"
+# use an array for multiple grade levels
+grade = ["IGCSE", "AS", "A2"]
+# category: project | activity | presentation | cheat-sheet | tool | github-link
+item_type = "github-link"
+# item has been manually checked for full correctness. Portfolio should display warning if this is false
+checked = false
+
+[[resources]]
+type = "github"
+url = "https://github.com/Hemriel/CIE_Pseudo_Python_Translator"
+label = "Source code"

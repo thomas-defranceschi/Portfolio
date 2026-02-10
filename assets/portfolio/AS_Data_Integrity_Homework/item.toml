@@ -1,0 +1,28 @@
+# Copy this folder and rename it to your item
+# Then fill in the fields below.
+
+title = "Programming practice"
+school = "MIST"
+curriculum = "CIE"
+subject = "Computer Science"
+# use an array for multiple grade levels
+grade = ["AS"]
+# category: project | activity | presentation | cheat-sheet | tool | github-link
+item_type = "activity"
+checked = false
+
+# Resources attached to this item
+[[resources]]
+type = "python"
+path = "techniques.py"
+label = "student file"
+
+[[resources]]
+type = "python"
+path = "testing.py"
+label = "tester file"
+
+[[resources]]
+type = "pdf"
+path = "homework.pdf"
+label = "instructions"

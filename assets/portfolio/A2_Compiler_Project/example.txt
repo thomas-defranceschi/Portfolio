@@ -1,0 +1,16 @@
+OUTPUT "give a number."
+INPUT a
+OUTPUT "one more please"
+INPUT b
+
+c <- a + b
+
+OUTPUT "the sum is"
+OUTPUT c
+
+IF c > 10 THEN
+    OUTPUT "That's a big number"
+ELSE
+    OUTPUT "You could have picked bigger"
+ENDIF
+

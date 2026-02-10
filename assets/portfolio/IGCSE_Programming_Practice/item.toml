@@ -1,0 +1,26 @@
+# Copy this folder and rename it to your item
+# Then fill in the fields below.
+
+title = "Programming practice"
+school = "MIST"
+curriculum = "CIE"
+subject = "Computer Science"
+# use an array for multiple grade levels
+grade = ["IGCSE"]
+# category: project | activity | presentation | cheat-sheet | tool | github-link
+item_type = "activity"
+checked = false
+
+# Resources attached to this item
+[[resources]]
+type = "python"
+path = "skills.py"
+label = "set of exercises"
+[[resources]]
+type = "python"
+path = "advanced.py"
+label = "optional advanced set"
+[[resources]]
+type = "python"
+path = "euler.py"
+label = "optional superior set"
