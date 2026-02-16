@@ -116,3 +116,9 @@ async function get_json_for_folder(folder) {
 }
 
 document.addEventListener("DOMContentLoaded", loadPortfolioItems);
+
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
