@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defranceschi Thomas - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <header class = "header">
-            <a href="#home" class="logo">Thomas Defranceschi</a>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defranceschi Thomas - Portfolio</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<script src="assets/js/resume.js" defer></script>
+</head>
+<body>
 
-            <i class="bi bi-list" id="menu-icon"></i>
-            
-            <nav class="navbar">
-                <a href="#home">Home</a></li>
-                <a href="#about">About Me</a></li>
-                <a href="#portfolio">Portfolio</a></li>
-                <a href="#contact">Contact</a></li>
-            </nav>
+    <!-- Header section code -->
 
-            <button id="theme-toggle">Toggle Dark Mode</button>
-        </header>
-        <main>
-            <section>
-                <h2>Resume</h2>
-                <p>
-                    Download: <a href="assets/resume/Defranceschi_Thomas_Resume.pdf" download>Defranceschi_Thomas_Resume.pdf</a>
-                </p>
-                <iframe
-                    src="assets/resume/Defranceschi_Thomas_Resume.pdf"
-                    title="Defranceschi Thomas Resume"
-                    width="100%"
-                    height="800"
-                ></iframe>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 Defranceschi Thomas. All rights reserved.</p>
-        </footer>
-    </body>
+    <header class = "header">
+        <a href="index.html" class="logo">Thomas Defranceschi</a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a></li>
+            <a href="#about">About Me</a></li>
+            <a href="#portfolio">Portfolio</a></li>
+            <a href="#contact">Contact</a></li>
+        </nav>
+    </header>
+    
+<!-- About me code -->
+
+<section class="about" id="about-me">
+    <div class="aboutcontent">
+        <h2 class="about-heading">About <span>Me</span></h2>
+
+        <p class="general-intro">
+            My background in mathematics and Computer Science has shaped the way I approach teaching: with structure, precision, and high expectations. I design learning experiences that challenge students to think deeply, build confidently, and take ownership of ambitious projects. Whether through curriculum-aligned lessons, assessment design, or custom-built classroom tools, my goal is to make complex ideas accessible without reducing their depth.
+        </p>
+
+        <p class="general-intro">
+            Below, you will find an overview of my <a class="in-link" href= #philosophy>teaching philosophy</a> and <a class="in-link" href= #resume>professional experience</a>. Together, these sections reflect the principles that guide my classroom practice and long-term development as an    educator.
+        </p>
+    </div>
+</section>
+
+<section class="philosophie" id="philosophy">
+    <div class="philo-content">
+        <h2 class="philo-heading">My teaching philosophy</h2>
+
+        <h3> Place for Curiosity </h3>
+
+        <p>I believe that meaningful learning begins with curiosity: both my own and that of my students. I consider it a privilege to teach subjects that continue to challenge and interest me. By actively engaging with developments in Computer Science and Mathematics, I maintain the sense of inquiry that I aim to model in the classroom.</p>
+
+        <p> My approach aligns closely with David Kolb's experiential learning cycle, in which understanding develops through a progression from concrete experience to reflection, abstraction, and active experimentation. When students move through this full cycle, learning becomes structured and durable rather than superficial. At every stage, meaningful challenge plays a central role: encountering something to overcome transforms curiosity into purposeful engagement.</p>
+
+        <h3> Projects as an Answer </h3>
+
+        <p>Projects provide a natural structure for this learning cycle. Well-designed projects allow students to experience concepts directly, reflect on their outcomes, test the limits of the models they are taught, and refine their understanding through iteration. In doing so, they see that even simplified frameworks can produce meaningful and satisfying results.</p>
+
+        <p>I believe it is important for students to understand that any model they learn is necessarily incomplete. Simplification makes learning accessible, but it also leaves space for further exploration. When appropriate, I involve students in deciding what to include and what to omit in a project. This process deepens their understanding and encourages intellectual humility: an awareness that learning is always partial and ongoing.</p>
+
+        <p>By combining challenge, reflection, and tangible achievement, project-based learning nurtures both competence and forward-looking curiosity.</p>
+    </div>
+</section>
+
+<section class="resume" id="resume">
+    <div class="btn-group mb-4">
+        <button class="btn btn-outline-primary" onclick="showResume('short')">
+            Short Version
+        </button>
+        <button class="btn btn-outline-primary" onclick="showResume('long')">
+            Long Version
+        </button>
+    </div>
+
+    <div id="resume-short">
+    <!-- Short resume -->
+     <p>This is my short resume</p>
+    </div>
+
+    <div id="resume-long" style="display:none;">
+    <!-- Long resume -->
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam natus commodi consectetur ipsam fuga veniam at voluptatem explicabo doloremque officia. Dolor, nesciunt aspernatur? Recusandae perferendis quae nam. Ipsum, repellendus laudantium.</p>
+    </div>
+
+</section>
+</body>
 </html>
