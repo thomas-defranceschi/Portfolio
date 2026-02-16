@@ -19,9 +19,8 @@ async function loadPortfolioItems() {
         const items = [];
 
         for (const folder of folders) {
-            const jsonText = await get_json_for_folder(folder);
-            
-            let data = json.parse(jsonText);
+            const data = await get_json_for_folder(folder);
+
             if (!data) {
                 // skip this folder if we couldn't parse any metadata
                 continue;
@@ -113,7 +112,7 @@ async function get_json_for_folder(folder) {
     if (!itemResponse.ok) {
         throw new Error(`Toml parsing error: ${itemResponse.status}`);
     }
-    return await itemResponse.text();
+    return await itemResponse.text().json();
 }
 
 document.addEventListener("DOMContentLoaded", loadPortfolioItems);
