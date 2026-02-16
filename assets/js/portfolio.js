@@ -1,3 +1,5 @@
+const INDEX_PATH = "./assets/portfolio/index.json";
+
 async function loadPortfolioItems() {
     const container = document.getElementById("portfolio-items");
     if (!container) {
@@ -5,12 +7,8 @@ async function loadPortfolioItems() {
     }
 
     try {
-        const manifestResponse = await fetch("assets/portfolio/index.json");
-        if (!manifestResponse.ok) {
-            throw new Error("Failed to load portfolio index");
-        }
-
-        const folders = await manifestResponse.json();
+        const folders = await get_index();
+        container.textContent = "Index loaded succesfully"
         const items = [];
 
         for (const folder of folders) {
@@ -88,8 +86,17 @@ async function loadPortfolioItems() {
         container.innerHTML = "";
         container.appendChild(list);
     } catch (error) {
-        container.textContent = "Failed to load portfolio items.";
+        container.textContent += error;
     }
+
+    async function get_index() {
+        const response = await fetch(INDEX_PATH);
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+    }
+
 }
 
 document.addEventListener("DOMContentLoaded", loadPortfolioItems);
