@@ -1,0 +1,28 @@
+{
+    "title": "Programming practice",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "AS"
+    ],
+    "item_type": "activity",
+    "checked": false,
+    "resources": [
+        {
+            "type": "python",
+            "path": "techniques.py",
+            "label": "student file"
+        },
+        {
+            "type": "python",
+            "path": "testing.py",
+            "label": "tester file"
+        },
+        {
+            "type": "pdf",
+            "path": "homework.pdf",
+            "label": "instructions"
+        }
+    ]
+}

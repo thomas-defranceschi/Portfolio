@@ -1,0 +1,23 @@
+{
+    "title": "Programming practice",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "IGCSE"
+    ],
+    "item_type": "presentation",
+    "checked": false,
+    "resources": [
+        {
+            "type": "pdf",
+            "path": "presentation.pdf",
+            "label": "presentation"
+        },
+        {
+            "type": "pdf",
+            "path": "cheatsheet.pdf",
+            "label": "student cheat sheet"
+        }
+    ]
+}

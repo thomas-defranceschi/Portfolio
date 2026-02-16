@@ -1,0 +1,20 @@
+{
+    "title": "Visual CPU Simulator",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "IGCSE",
+        "AS",
+        "A2"
+    ],
+    "item_type": "github-link",
+    "checked": false,
+    "resources": [
+        {
+            "type": "github",
+            "url": "https://github.com/Hemriel/CIE-CPU-Simulator",
+            "label": "Source code"
+        }
+    ]
+}

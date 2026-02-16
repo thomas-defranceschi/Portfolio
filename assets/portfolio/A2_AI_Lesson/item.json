@@ -1,0 +1,18 @@
+{
+    "title": "AI Lesson",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "A2"
+    ],
+    "item_type": "presentation",
+    "checked": false,
+    "resources": [
+        {
+            "type": "pdf",
+            "path": "A2_AI.pdf",
+            "label": "presentation"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "title": "AI Activity",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "A2"
+    ],
+    "item_type": "activity",
+    "checked": false,
+    "resources": [
+        {
+            "type": "pdf",
+            "path": "AI_Homework.pdf",
+            "label": "instructions"
+        },
+        {
+            "type": "python",
+            "path": "graph_algorithms.py",
+            "label": "student file"
+        },
+        {
+            "type": "python",
+            "path": "graph_collection.py",
+            "label": "collection of graph instances"
+        },
+        {
+            "type": "python",
+            "path": "graph.py",
+            "label": "class definition file"
+        },
+        {
+            "type": "python",
+            "path": "test_graph_algorithms.py",
+            "label": "tester file"
+        }
+    ]
+}

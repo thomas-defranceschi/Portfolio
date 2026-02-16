@@ -1,0 +1,56 @@
+{
+    "title": "",
+    "school": "",
+    "curriculum": "",
+    "subject": "",
+    "grade": [],
+    "item_type": "",
+    "checked": false,
+    "resources": [
+        {
+            "type": "python",
+            "path": "AST.py",
+            "label": "full AST example"
+        },
+        {
+            "type": "python",
+            "path": "code_generator.py",
+            "label": "full code generator example"
+        },
+        {
+            "type": "python",
+            "path": "compiler.py",
+            "label": "full entry point example"
+        },
+        {
+            "type": "python",
+            "path": "lexer.py",
+            "label": "full lexer example"
+        },
+        {
+            "type": "python",
+            "path": "parser.py",
+            "label": "full parser example"
+        },
+        {
+            "type": "python",
+            "path": "semantic_analyser.py",
+            "label": "full semantic analyser example"
+        },
+        {
+            "type": "python",
+            "path": "symbols.py",
+            "label": "full symbol class definition example"
+        },
+        {
+            "type": "pdf",
+            "path": "Compiler_project_instructions.py",
+            "label": "instructions"
+        },
+        {
+            "type": "text",
+            "path": "example.py",
+            "label": "CIE pseudocode example"
+        }
+    ]
+}

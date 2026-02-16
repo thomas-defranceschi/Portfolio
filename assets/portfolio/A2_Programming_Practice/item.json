@@ -1,0 +1,23 @@
+{
+    "title": "Programming practice",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "A2"
+    ],
+    "item_type": "activity",
+    "checked": false,
+    "resources": [
+        {
+            "type": "python",
+            "path": "skills_1.py",
+            "label": "first set of exercises"
+        },
+        {
+            "type": "python",
+            "path": "skills_2.py",
+            "label": "second set of exercises"
+        }
+    ]
+}

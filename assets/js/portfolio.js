@@ -1,7 +1,9 @@
 // Base path to portfolio assets (keep leading ./ so paths resolve from page)
 const ASSETS_BASE = "./assets/portfolio/";
 const INDEX_PATH = ASSETS_BASE + "index.json";
-const TOML_FILE_NAME = "item.toml";
+
+const TOML_PARSER = (typeof TOML !== "undefined" ? TOML : (typeof toml !== "undefined" ? toml : undefined));
+const JSON_FILE_NAME = "item.json";
 
 async function loadPortfolioItems() {
     const container = document.getElementById("portfolio-items");
@@ -17,9 +19,9 @@ async function loadPortfolioItems() {
         const items = [];
 
         for (const folder of folders) {
-            const tomlText = await get_toml_for_folder(folder);
+            const jsonText = await get_json_for_folder(folder);
             
-            let data = TOML.parse(tomlText);
+            let data = json.parse(jsonText);
             if (!data) {
                 // skip this folder if we couldn't parse any metadata
                 continue;
@@ -105,8 +107,8 @@ async function get_index() {
     return response.json();
 }
 
-async function get_toml_for_folder(folder) {
-    const itemTomlUrl = `${ASSETS_BASE}${folder}/${TOML_FILE_NAME}`;
+async function get_json_for_folder(folder) {
+    const itemTomlUrl = `${ASSETS_BASE}${folder}/${JSON_FILE_NAME}`;
     const itemResponse = await fetch(itemTomlUrl);
     if (!itemResponse.ok) {
         throw new Error(`Toml parsing error: ${itemResponse.status}`);

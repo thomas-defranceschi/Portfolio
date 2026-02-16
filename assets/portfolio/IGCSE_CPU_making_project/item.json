@@ -1,0 +1,25 @@
+{
+    "title": "Programming practice",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": [
+        "IGCSE"
+    ],
+    "item_type": "project",
+    "checked": false,
+    "external_links": [
+        {
+            "credits": "This project uses the fantastic Digital Logic Sim by Sebastian Lague",
+            "label": "Used software",
+            "url": "https://sebastian.itch.io/digital-logic-sim"
+        }
+    ],
+    "resources": [
+        {
+            "type": "pdf",
+            "path": "lets_make_a_CPU.pdf",
+            "label": "instructions"
+        }
+    ]
+}

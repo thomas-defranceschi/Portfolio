@@ -1,0 +1,28 @@
+{
+	"title": "",
+	"school": "",
+	"curriculum": "",
+	"subject": "",
+	"grade": ["AS","IGCSE","A2"],
+	"item_type": "project | activity | presentation | cheat-sheet | tool | github-link",
+	"checked": false,
+	"external_links": [
+		{
+			"credits": "Tool by Author Name",
+			"label": "Tool page",
+			"url": "https://example.com/tool"
+		}
+	],
+	"resources": [
+		{
+			"type": "pdf",
+			"path": "slides.pdf",
+			"label": "Slides"
+		},
+		{
+			"type": "github",
+			"url": "https://github.com/example/repo",
+			"label": "Source code"
+		}
+	]
+}
