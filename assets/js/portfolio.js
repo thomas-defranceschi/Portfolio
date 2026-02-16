@@ -112,7 +112,7 @@ async function get_json_for_folder(folder) {
     if (!itemResponse.ok) {
         throw new Error(`Toml parsing error: ${itemResponse.status}`);
     }
-    return await itemResponse.text().json();
+    return await itemResponse.json();
 }
 
 document.addEventListener("DOMContentLoaded", loadPortfolioItems);
