@@ -41,9 +41,11 @@
     </div>
 </section>
 
+<!-- My philosophy code -->
+
 <section class="philosophie" id="philosophy">
     <div class="philo-content">
-        <h2 class="philo-heading">My teaching philosophy</h2>
+        <h2 class="philo-heading">My teaching <span>philosophy</span></h2>
 
         <h3> Place for Curiosity </h3>
 
@@ -61,26 +63,158 @@
     </div>
 </section>
 
+<!-- Resume code -->
+
 <section class="resume" id="resume">
-    <div class="btn-group mb-4">
-        <button class="btn btn-outline-primary" onclick="showResume('short')">
-            Short Version
-        </button>
-        <button class="btn btn-outline-primary" onclick="showResume('long')">
-            Long Version
-        </button>
-    </div>
+    <div class="resume-content">
+        <h2 class="resume-heading">My <span>Resume</span></h2>
+        <div class="button-area">
+            <div class="button-group-pill">
+                <button class="button-pill active" onclick="showResume('short')">
+                    Short Version
+                </button>
+                <button class="button-pill" onclick="showResume('long')">
+                    Long Version
+                </button>
+                <button class="button-pill" onclick="showResume('long')">
+                    Downloads
+                </button>
+            </div>
+        </div>
 
-    <div id="resume-short">
-    <!-- Short resume -->
-     <p>This is my short resume</p>
-    </div>
+        <div id="resume-short">
+        <!-- Short Resume Content -->
 
-    <div id="resume-long" style="display:none;">
-    <!-- Long resume -->
-     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam natus commodi consectetur ipsam fuga veniam at voluptatem explicabo doloremque officia. Dolor, nesciunt aspernatur? Recusandae perferendis quae nam. Ipsum, repellendus laudantium.</p>
-    </div>
+            <div class="resume-grid">
 
+                <!-- LEFT COLUMN -->
+                <div class="resume-main">
+
+                    <div class="resume-section">
+                        <h3>Teaching Experience</h3>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>Middle & High School Computer Science Substitute Teacher</strong>
+                                <span class="resume-date">Oct 2025 - Jan 2026</span>
+                            </div>
+                            <div class="resume-meta">
+                                Musashi International School Tokyo (MIST) — Tokyo, Japan
+                            </div>
+                            <ul>
+                                <li>Taught Junior High School, Cambridge IGCSE, and AS/A Level Computer Science.</li>
+                                <li>Delivered Cambridge-aligned curriculum; planned and assessed lessons; prepared students for examinations.</li>
+                                <li>Implemented project-based learning and contributed to grading, reporting, and pastoral support.</li>
+                                <li>Recognized for strong organizational skills; appointed security officer during major school events.</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>English & French Teacher</strong>
+                                <span class="resume-date">2022 - 2025</span>
+                            </div>
+                            <div class="resume-meta">
+                                Classes de Français, Ani's Place, ChatShack — Tokyo, Japan
+                            </div>
+                            <ul>
+                                <li>Taught small-group classes for adult learners using the Gattegno method.</li>
+                                <li>Focused on pronunciation, structural awareness, and learner autonomy.</li>
+                                <li>Designed and delivered group and private lessons for children (ages 4-16) and adults.</li>
+                                <li>Contributed to curriculum design and individualized learning plans.</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>Private Tutor</strong>
+                                <span class="resume-date">2017</span>
+                            </div>
+                            <div class="resume-meta">
+                                Acadomia — Nice, France
+                            </div>
+                        </div>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>Mathematics Substitute Teacher</strong>
+                                <span class="resume-date">2017</span>
+                            </div>
+                            <div class="resume-meta">
+                                CRPS Bousquet Private School — Nice, France
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="resume-side">
+
+                    <div class="resume-section">
+                        <h3>Education</h3>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>Bachelor's Degree in Mathematics</strong>
+                                <span class="resume-date">2015-2016</span>
+                            </div>
+                            <div class="resume-meta">
+                                University of Nice — Nice, France
+                            </div>
+                        </div>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>Master of Teaching (MEEF — Year 1)</strong>
+                                <span class="resume-date">2021-2022</span>
+                            </div>
+                            <div class="resume-meta">
+                                University of Paris — Paris, France
+                            </div>
+                            <p>
+                                Secondary education track in Mathematics and Sciences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>Languages</h3>
+
+                        <div class="resume-item">
+                            <ul>
+                                <li><strong>French</strong> — Native</li>
+                                <li><strong>English</strong> — Native level</li>
+                                <li><strong>Japanese</strong> — Conversational</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>Other Experience</h3>
+
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>Activity Leader and Camp Director</strong>
+                                <span class="resume-date">2010-2014</span>
+                            </div>
+                            <div class="resume-meta">
+                                La Cité des Jeunes — France
+                            </div>
+                            <ul>
+                                <li>Led and coordinated summer programs for children and teenagers aged 6-17.</li>
+                                <li>Developed leadership, safeguarding, and organizational skills.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="resume-long" style="display:none;">
+        <!-- Long resume -->
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam natus commodi consectetur ipsam fuga veniam at voluptatem explicabo doloremque officia. Dolor, nesciunt aspernatur? Recusandae perferendis quae nam. Ipsum, repellendus laudantium.</p>
+        </div>
+    </div>
 </section>
 </body>
 </html>

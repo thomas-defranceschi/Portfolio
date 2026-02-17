@@ -103,7 +103,7 @@ section {
 	border-radius: 25%;
 	box-shadow: 0 0 25px var(--main-color);
 	cursor: pointer;
-	animation: floatImage 4s ease-in-out infinite;
+	animation: floatImage 3s ease-in-out infinite;
 	transition: var(--trans_time_long) ease;
 }
 
@@ -115,13 +115,13 @@ section {
 
 @keyframes floatImage {
 	0% {
-		transform: translateY(0);
+		box-shadow: 0 0 25px var(--main-color);
 	}
 	50% {
-		transform: translateY(-2rem);
+		box-shadow: 0 0 45px var(--main-color);
 	}
 	100% {
-		transform: translateY(0);
+		box-shadow: 0 0 25px var(--main-color);
 	}
 }
 
@@ -175,6 +175,9 @@ span {
 .philo-heading {
 	font-size: 4rem;
 	padding-bottom: 2rem;
+}
+
+.philo-heading span {
 	color: var(--main-color);
 }
 
@@ -186,4 +189,160 @@ span {
 .philo-content p {
 	font-size: 1.5rem;
 	padding-bottom: 1rem;
+}
+
+.resume {
+	background: var(--snd-bg-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.resume-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.resume-heading {
+	font-size: 4rem;
+	padding-bottom: 2rem;
+}
+
+.resume-heading span {
+	color: var(--main-color);
+}
+
+.button-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-group-pill {
+	background-color: white;
+	display: flex;
+	gap: 5px;
+	padding: 5px;
+	border-radius: 40px;
+}
+
+.button-pill {
+	background-color: var(--bg-color);
+	border: none;
+	color: black;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 30px; 
+	transition: background-color 0.3s;
+}
+
+.button-pill:hover {
+	background-color: var(--snd-bg-color);
+}
+
+.button-pill.active {
+	background-color: var(--main-color);
+	color: var(--bg-color);
+}
+
+/* Resume content styling */
+
+.resume-section {
+	margin-top: 2rem;
+}
+
+.resume-section h3 {
+	font-size: 2.6rem;
+	margin-bottom: 2rem;
+	position: relative;
+	display: inline-block;
+}
+
+.resume-section h3::after {
+	content: "";
+	display: block;
+	width: 60%;
+	height: 3px;
+	background: var(--main-color);
+	margin-top: 0.5rem;
+	border-radius: 2px;
+}
+
+.resume-item {
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.resume-item:last-child {
+	border-bottom: none;
+}
+
+.resume-item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.resume-item-header strong {
+	font-size: 1.8rem;
+}
+
+.resume-date {
+	font-size: 1.4rem;
+	color: var(--main-color);
+	font-weight: 600;
+}
+
+.resume-meta {
+	font-size: 1.4rem;
+	font-style: italic;
+	margin: 0.5rem 0 1rem 0;
+	opacity: 0.85;
+}
+
+.resume-item p {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.resume-item ul {
+	margin-left: 2rem;
+	margin-top: 1rem;
+}
+
+.resume-item li {
+	font-size: 1.5rem;
+	margin-bottom: 0.6rem;
+	line-height: 1.6;
+}
+/* Two-column resume layout */
+
+.resume-grid {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	gap: 4rem;
+	margin-top: 2rem;
+}
+
+.resume-main,
+.resume-side {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+	.resume-grid {
+		grid-template-columns: 1fr;
+	}
 }
