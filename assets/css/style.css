@@ -346,3 +346,21 @@ span {
 		grid-template-columns: 1fr;
 	}
 }
+
+.download-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 4rem;
+	margin-top: 2rem;
+}
+
+.download-grid h4 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.download-grid a {
+	font-size: 1.5rem;
+	color: var(--main-color);
+	margin-bottom: 1rem;
+}
