@@ -109,17 +109,19 @@ section {
 
 .home-img img:hover {
 	box-shadow: 0 0 25px var(--main-color),
-				0 0 35px var(--main-color),
-				0 0 45px var(--main-color);
+		0 0 35px var(--main-color),
+		0 0 45px var(--main-color);
 }
 
 @keyframes floatImage {
 	0% {
 		box-shadow: 0 0 25px var(--main-color);
 	}
+
 	50% {
 		box-shadow: 0 0 45px var(--main-color);
 	}
+
 	100% {
 		box-shadow: 0 0 25px var(--main-color);
 	}
@@ -239,7 +241,7 @@ span {
 	display: inline-block;
 	cursor: pointer;
 	font-size: 16px;
-	border-radius: 30px; 
+	border-radius: 30px;
 	transition: background-color 0.3s;
 }
 
@@ -325,6 +327,7 @@ span {
 	margin-bottom: 0.6rem;
 	line-height: 1.6;
 }
+
 /* Two-column resume layout */
 
 .resume-grid {
@@ -372,9 +375,10 @@ span {
 }
 
 #portfolio-items {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	display: flex;
+	flex-wrap: wrap;
 	gap: 2rem;
+	align-items: stretch;
 }
 
 #portfolio-items .portfolio-card {
@@ -394,12 +398,10 @@ span {
 }
 
 #portfolio-items #title {
-	justify-self: flex-start;
-	font-size: larger;
+	font-size: 2.5rem;
 }
 
 #portfolio-items #tags {
-	justify-self: flex-start;
 	margin-bottom: 1rem;
 }
 
@@ -411,7 +413,6 @@ span {
 
 #portfolio-items .link {
 	margin-top: auto;
-	align-self: flex-end;
 	font-size: 1.5rem;
 	color: var(--main-color);
 	font-weight: 600;
