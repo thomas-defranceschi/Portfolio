@@ -1,10 +1,10 @@
 {
-    "title": "",
-    "school": "",
-    "curriculum": "",
-    "subject": "",
-    "grade": [],
-    "item_type": "",
+    "title": "Writing a partial translator, CIE to Python",
+    "school": "MIST",
+    "curriculum": "CIE",
+    "subject": "Computer Science",
+    "grade": ["A2"],
+    "item_type": "project",
     "checked": false,
     "resources": [
         {

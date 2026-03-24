@@ -14,5 +14,6 @@
             "path": "program_design_presentation.pdf",
             "label": "presentation and instructions"
         }
-    ]
+    ],
+    "description": "Instructions for a program design activity aimed at practicing the devellopment cycle, debuging practices, and CIE pseudocode."
 }
