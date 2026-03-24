@@ -389,7 +389,6 @@ span {
 	padding: 1rem 2rem;
 	border-radius: 2rem;
 	border: 0.2rem solid var(--main-color);
-	align-items: stretch;
 	transition: all var(--trans_time_short) ease;
 }
 
