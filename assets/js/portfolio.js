@@ -13,6 +13,8 @@ function createCard(item) {
     clone.querySelector(".grade").textContent = Array.isArray(item.grade) ? item.grade.join(", ") : item.grade;
     clone.querySelector(".description").textContent = item.description || "No description available.";
     clone.querySelector(".link").href = item.link;
+
+    clone.style.display = "";
     return clone;
 }
 
