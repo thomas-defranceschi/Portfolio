@@ -396,10 +396,17 @@ span {
 
 #portfolio-items #title {
 	justify-self: flex-start;
+	font-size: larger;
 }
 
 #portfolio-items #tags {
 	justify-self: flex-start;
+	margin-bottom: 1rem;
+}
+
+#portfolio-items #description {
+	flex-grow: 1;
+	font-size: 1.5rem;
 	margin-bottom: 1rem;
 }
 
