@@ -4,7 +4,7 @@ const INDEX_PATH = ASSETS_BASE + "index.json";
 const JSON_FILE_NAME = "item.json";
 
 function createCard(item) {
-    const template = document.getElementById(`card-template`);
+    const template = document.getElementById("card-template");
     const clone = template.content.cloneNode(true);
     
     clone.querySelector(".title").textContent = item.title || "Untitled";
