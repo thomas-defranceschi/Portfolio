@@ -8,12 +8,12 @@ function createCard(item) {
     console.log(template);
     const clone = template.content.cloneNode(true);
     
-    clone.querySelector(".title").textContent = item.title || "Untitled";
-    clone.querySelector(".curriculum").textContent = item.curriculum || "";
-    clone.querySelector(".subject").textContent = item.subject || "";
-    clone.querySelector(".grade").textContent = Array.isArray(item.grade) ? item.grade.join(", ") : item.grade;
-    clone.querySelector(".description").textContent = item.description || "No description available.";
-    clone.querySelector(".link").href = item.link;
+    clone.querySelector("#title").textContent = item.title || "Untitled";
+    clone.querySelector("#curriculum").textContent = item.curriculum || "";
+    clone.querySelector("#subject").textContent = item.subject || "";
+    clone.querySelector("#grade").textContent = Array.isArray(item.grade) ? item.grade.join(", ") : item.grade;
+    clone.querySelector("#description").textContent = item.description || "No description available.";
+    clone.querySelector("#link").href = item.link;
     return clone;
 }
 
