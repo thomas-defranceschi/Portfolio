@@ -16,5 +16,6 @@
             "url": "https://github.com/Hemriel/CIE-CPU-Simulator",
             "label": "Source code"
         }
-    ]
+    ],
+    "description": "Educational software intended to illustrate Von Neumann CPUs, as well as two step assemblers. Freely available on github. The code base is intended to be readable by students and is rich in comments and docummentation."
 }

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Defranceschi Thomas - Portfolio</title>
-<link rel="stylesheet" href="assets/css/style.css">
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defranceschi Thomas - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Header section code -->
 
-    <header class = "header">
+    <header class="header">
         <a href="index.html" class="logo">Thomas Defranceschi</a>
 
         <i class="bx bx-menu" id="menu-icon"></i>
-        
+
         <nav class="navbar">
             <a href="index.html">Home</a></li>
             <a href="resume.html">About Me</a></li>
@@ -23,21 +25,32 @@
             <a href="contact.html">Contact</a></li>
         </nav>
     </header>
-        <main>
-            <section>
-                <h2>Teaching Portfolio</h2>
-                <p>
-                    Below are selected artifacts from my teaching experience, organized by school,
-                    curriculum, grade level, and subject.
-                </p>
-                <div id="portfolio-items">
-                    <!-- Portfolio items will be rendered here by JavaScript -->
+    <main>
+        <section class="portfolio">
+            <h2 class="portfolio-heading">My <span>Teaching Portfolio</span></h2>
+            <div id="portfolio-items">
+                <!-- template for item display -->
+                <div class="portfolio-card bx" id="card-template" style="display:none;">
+                    <h3 id="title">Project title that might be long</h3>
+                    <h4 id="tags">
+                        <span id="curriculum">CIE</span>
+                        <span id="subject">CS</span>
+                        <span id="grade">IGCSE</span>
+                    </h4>
+                    <p id="description" class="card-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+                        possimus dolorum animi laborum atque. Eaque nihil inventore sunt nulla! Provident et, laborum
+                        minima nesciunt ullam vitae recusandae sunt eaque natus. Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Molestiae possimus dolorum animi laborum atque. Eaque nihil inventore sunt
+                        nulla! Provident et, laborum minima nesciunt ullam vitae recusandae sunt eaque natus.</p>
+                    <a class="link" href="link" target="_blank">link to the presentation</a>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 Defranceschi Thomas. All rights reserved.</p>
-        </footer>
-        <script src="assets/js/portfolio.js" defer></script>
-    </body>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Defranceschi Thomas. All rights reserved.</p>
+    </footer>
+    <!-- <script src="assets/js/portfolio.js" defer></script> -->
+</body>
+
 </html>

@@ -16,5 +16,6 @@
             "url": "https://github.com/Hemriel/CIE_Pseudo_Python_Translator",
             "label": "Source code"
         }
-    ]
+    ],
+    "description": "Educational software intended to illustrate how compilers work. Also act as a translator for CIE Pseudocode to runnable Python code. Freely available on github. The code base is intended to be readable by students and is rich in comments and docummentation."
 }

@@ -52,5 +52,6 @@
             "path": "example.py",
             "label": "CIE pseudocode example"
         }
-    ]
+    ],
+    "description": "Limited CIE pseudocode to Python compiler project. Includes instructions and example completed files. Covers the importance of lexing, parsing, abstract syntax trees, and code generation."
 }

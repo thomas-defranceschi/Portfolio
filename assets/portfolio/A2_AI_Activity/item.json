@@ -34,5 +34,6 @@
             "path": "test_graph_algorithms.py",
             "label": "tester file"
         }
-    ]
+    ],
+    "description": "Programming homework on Dikjstra's and A* algorithms. Contains instructions and Python files, including a test file to allow students to self check correctness."
 }

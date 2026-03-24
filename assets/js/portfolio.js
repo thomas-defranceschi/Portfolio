@@ -1,9 +1,71 @@
 // Base path to portfolio assets (keep leading ./ so paths resolve from page)
 const ASSETS_BASE = "./assets/portfolio/";
 const INDEX_PATH = ASSETS_BASE + "index.json";
-
-const TOML_PARSER = (typeof TOML !== "undefined" ? TOML : (typeof toml !== "undefined" ? toml : undefined));
 const JSON_FILE_NAME = "item.json";
+
+function createCard(item) {
+    const template = document.getElementById(`card-template`);
+    const clone = template.content.cloneNode(true);
+    
+    clone.querySelector(".title").textContent = item.title || "Untitled";
+    clone.querySelector(".curriculum").textContent = item.curriculum || "";
+    clone.querySelector(".subject").textContent = item.subject || "";
+    clone.querySelector(".grade").textContent = Array.isArray(item.grade) ? item.grade.join(", ") : item.grade;
+    clone.querySelector(".description").textContent = item.description || "No description available.";
+    clone.querySelector(".link").href = item.link;
+    return clone;
+}
+
+function createCardLegacy(item) {
+    const card = document.createElement("article");
+    card.className = "portfolio-card";
+
+    const title = document.createElement("h3");
+    title.textContent = item.title || "Untitled";
+
+    const meta = document.createElement("p");
+    const grade = Array.isArray(item.grade) ? item.grade.join(", ") : item.grade || "";
+    meta.textContent = [item.school, item.curriculum, grade, item.subject]
+        .filter(Boolean)
+        .join(" • ");
+
+    const type = document.createElement("p");
+    type.textContent = item.item_type ? `Type: ${item.item_type}` : "";
+
+    const resources = document.createElement("ul");
+    if (Array.isArray(item.resources)) {
+        for (const resource of item.resources) {
+            const li = document.createElement("li");
+            if (resource.url) {
+                li.innerHTML = `<a href="${resource.url}" target="_blank" rel="noopener">${resource.label || resource.url}</a>`;
+            } else if (resource.path) {
+                li.innerHTML = `<a href="${ASSETS_BASE}${item.folder}/${resource.path}">${resource.label || resource.path}</a>`;
+            } else {
+                li.textContent = resource.label || "Resource";
+            }
+            resources.appendChild(li);
+        }
+    }
+
+    if (resources.children.length === 0) {
+        const empty = document.createElement("p");
+        empty.textContent = "Resources coming soon.";
+        card.appendChild(title);
+        card.appendChild(meta);
+        if (type.textContent) {
+            card.appendChild(type);
+        }
+        card.appendChild(empty);
+    } else {
+        card.appendChild(title);
+        card.appendChild(meta);
+        if (type.textContent) {
+            card.appendChild(type);
+        }
+        card.appendChild(resources);
+    }
+    return card;
+}
 
 async function loadPortfolioItems() {
     const container = document.getElementById("portfolio-items");
@@ -28,67 +90,21 @@ async function loadPortfolioItems() {
             data.folder = folder;
             items.push(data);
         }
-        
+
         if (items.length === 0) {
             container.textContent = "No portfolio items found.";
             return;
         }
-        
+
         const list = document.createElement("div");
         list.className = "portfolio-list";
-        
+
         for (const item of items) {
-            const card = document.createElement("article");
-            card.className = "portfolio-card";
-            
-            const title = document.createElement("h3");
-            title.textContent = item.title || "Untitled";
-            
-            const meta = document.createElement("p");
-            const grade = Array.isArray(item.grade) ? item.grade.join(", ") : item.grade || "";
-            meta.textContent = [item.school, item.curriculum, grade, item.subject]
-            .filter(Boolean)
-            .join(" • ");
-            
-            const type = document.createElement("p");
-            type.textContent = item.item_type ? `Type: ${item.item_type}` : "";
-            
-            const resources = document.createElement("ul");
-            if (Array.isArray(item.resources)) {
-                for (const resource of item.resources) {
-                    const li = document.createElement("li");
-                    if (resource.url) {
-                        li.innerHTML = `<a href="${resource.url}" target="_blank" rel="noopener">${resource.label || resource.url}</a>`;
-                    } else if (resource.path) {
-                        li.innerHTML = `<a href="${ASSETS_BASE}${item.folder}/${resource.path}">${resource.label || resource.path}</a>`;
-                    } else {
-                        li.textContent = resource.label || "Resource";
-                    }
-                    resources.appendChild(li);
-                }
-            }
-            
-            if (resources.children.length === 0) {
-                const empty = document.createElement("p");
-                empty.textContent = "Resources coming soon.";
-                card.appendChild(title);
-                card.appendChild(meta);
-                if (type.textContent) {
-                    card.appendChild(type);
-                }
-                card.appendChild(empty);
-            } else {
-                card.appendChild(title);
-                card.appendChild(meta);
-                if (type.textContent) {
-                    card.appendChild(type);
-                }
-                card.appendChild(resources);
-            }
-            
+            const card = createCard(item);
+
             list.appendChild(card);
         }
-        
+
         container.innerHTML = "";
         container.appendChild(list);
     } catch (error) {

@@ -19,5 +19,6 @@
             "path": "cheatsheet.pdf",
             "label": "student cheat sheet"
         }
-    ]
+    ],
+    "description": "Presentation on programming languages and translators. Includes a presentation and a cheatsheet for students. Covers language levels, assembly, assemblers, compilers, interpreters, IDE functions, and practice questions. "
 }

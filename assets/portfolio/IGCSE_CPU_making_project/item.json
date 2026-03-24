@@ -21,5 +21,6 @@
             "path": "lets_make_a_CPU.pdf",
             "label": "instructions"
         }
-    ]
+    ],
+    "description": "8 bit CPU creation project using a logic circuit simulator. Does not strictly portrays Von Neumann architecture. Includes an extensive step by step presentation with walkthrough images. Requires the free software Digital Logic Sim by Sebastian Lague, available on itch.io."
 }

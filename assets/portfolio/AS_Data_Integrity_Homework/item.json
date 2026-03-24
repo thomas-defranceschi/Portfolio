@@ -24,5 +24,6 @@
             "path": "homework.pdf",
             "label": "instructions"
         }
-    ]
+    ],
+    "description": "Programming homework on data integrity. Contains instructions and Python files, including a test file to allow students to self check correctness."
 }

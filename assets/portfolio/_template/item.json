@@ -24,5 +24,6 @@
 			"url": "https://github.com/example/repo",
 			"label": "Source code"
 		}
-	]
+	],
+    "description": "No description available"
 }

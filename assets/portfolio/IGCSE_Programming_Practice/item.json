@@ -24,5 +24,6 @@
             "path": "euler.py",
             "label": "optional superior set"
         }
-    ]
+    ],
+    "description": "Programming practice exercises. Covers most basic atomic skills."
 }

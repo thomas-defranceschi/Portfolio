@@ -14,5 +14,6 @@
             "path": "presentation.pdf",
             "label": "presentation"
         }
-    ]
+    ],
+    "description": "Presentation on assembly and translation. Includes IGCSE refreshers, assembly, pipelining, two pass assemblers, bit manipulation, language translators, IDE functions, and practice questions."
 }

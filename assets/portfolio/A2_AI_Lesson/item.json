@@ -14,5 +14,6 @@
             "path": "A2_AI.pdf",
             "label": "presentation"
         }
-    ]
+    ],
+    "description": "Presentation on AI, mostly focused on vacabulary. Includes IGCSE/AS level refreshers, machine learning, training types, regression and backpropagation, extra vocabulary and practice questions."
 }
