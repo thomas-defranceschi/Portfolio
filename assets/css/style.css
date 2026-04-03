@@ -375,21 +375,20 @@ span {
 }
 
 #portfolio-items {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 2rem;
-	align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+    align-items: stretch;
 }
 
 #portfolio-items .portfolio-card {
-	flex: 1 1 30rem;
-	display: flex;
-	flex-direction: column;
-	background: var(--snd-bg-color);
-	padding: 1rem 2rem;
-	border-radius: 2rem;
-	border: 0.2rem solid var(--main-color);
-	transition: all var(--trans_time_short) ease;
+    display: flex;
+    flex-direction: column;
+    background: var(--snd-bg-color);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: 0.2rem solid var(--main-color);
+    transition: all var(--trans_time_short) ease;
 }
 
 #portfolio-items .portfolio-card:hover {
