@@ -70,48 +70,37 @@ function createCardLegacy(item) {
 
 async function loadPortfolioItems() {
     const container = document.getElementById("portfolio-items");
-    if (!container) {
-        return;
-    }
+    if (!container) return;
 
     try {
         const folders = await get_index();
         if (!Array.isArray(folders)) {
             throw new Error("index.json must be an array of folder names");
         }
-        const items = [];
-
-        for (const folder of folders) {
-            const data = await get_json_for_folder(folder);
-
-            if (!data) {
-                // skip this folder if we couldn't parse any metadata
-                continue;
-            }
-            data.folder = folder;
-            items.push(data);
-        }
-
-        if (items.length === 0) {
-            container.textContent = "No portfolio items found.";
-            return;
-        }
-
-        const list = document.createElement("div");
-        list.className = "portfolio-list";
-
-        for (const item of items) {
-            const card = createCard(item);
-
-            list.appendChild(card);
-        }
 
         container.innerHTML = "";
-        container.appendChild(list);
+
+        // Fire all fetches in parallel, but append cards as each one resolves
+        const promises = folders.map(folder =>
+            get_json_for_folder(folder)
+                .then(data => {
+                    if (!data) return;
+                    data.folder = folder;
+                    const card = createCard(data);
+                    container.appendChild(card); // append immediately when ready
+                })
+                .catch(err => console.warn(`Skipping ${folder}:`, err))
+        );
+
+        await Promise.all(promises);
+
+        if (container.children.length === 0) {
+            container.textContent = "No portfolio items found.";
+        }
+
     } catch (error) {
         console.error(error);
-        container.textContent = "Error loading portfolio: " + (error && error.message ? error.message : String(error));
-        return;
+        container.textContent = "Error loading portfolio: " + (error?.message ?? String(error));
     }
 }
 
